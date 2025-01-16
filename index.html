@@ -19,7 +19,7 @@
         .row {
             height: 100%;
         }
-        .col-3 { /* Adjusted width for the sidebar */
+        .col-4 {
             background-color: #0a0535;
             display: flex;
             align-items: flex-start;
@@ -28,10 +28,14 @@
             bottom: 0;
             overflow-y: auto;
             padding: 5px;
-            width: 15%; /* Thinner sidebar */
+            width: 24%;
+            margin-right: 0; /* Remove margin */
         }
-        .col-9 { /* Adjusted content width */
-            margin-left: 17%; /* Adjust width based on new sidebar width */
+        .col-4 .nav-link {
+            padding-right: 0; /* Remove padding on the right side of the links */
+        }
+        .col-8 {
+            margin-left: 21%; /* Adjust width based on col-4 */
             display: flex;
             justify-content: center;
             overflow-y: auto;
@@ -42,7 +46,7 @@
   </head> 
   <body>
     <div class="row">
-      <div class="col-3"> <!-- Sidebar now with class col-3 -->
+      <div class="col-4">
         <nav id="list-example" class="nav flex-column">
           <a class="nav-link" href="#list-item-1">Flappers</a>
           <a class="nav-link" href="#list-item-2">Civil War</a>
@@ -53,7 +57,7 @@
           <a class="nav-link" href="#list-item-7">Full analysis</a>
         </nav>
       </div>
-      <div class="col-9"> <!-- Content area -->
+      <div class="col-8">
         <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
           <h4 id="list-item-1">Flappers</h4>
           <p>This video is a documentary about Flappers. Flappers became an iconic representation of modern, liberated women in the 1920s. This is a way for them to emancipate and show who they really are. 
