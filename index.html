@@ -42,9 +42,30 @@
             padding: 20px;
             height: 100%;
         }
+        button {
+          background-color: #0a0535;
+          color: #ffffff;
+          border: none;
+          padding: 10px 20px;
+          font-size: 1.2em;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+          background-color: #ffffff;
+          color: #0a0535;
+          border: 1px solid #0a0535;
+        }
     </style>
   </head> 
   <body>
+
+    <div style="text-align: center; margin-top: 20px;">
+      <button onclick="window.location.href='documents.html'">Go to Documents</button>
+    </div>
+
+
     <div class="row">
       <div class="col-4">
         <nav id="list-example" class="nav flex-column">
