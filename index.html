@@ -30,9 +30,18 @@
           .then(response => response.json())
           .then(data => {
             console.log('User IP Address:', data.ip);
+            return fetch('https://your-backend-server.com/store-ip', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ ip: data.ip })
+            });
+          })
+          .then(() => {
             window.location.href = 'main.html';
           })
-          .catch(error => console.error('Error fetching IP address:', error));
+          .catch(error => console.error('Error fetching or storing IP address:', error));
       } else {
         console.error('Fetch API not supported in this browser.');
       }
